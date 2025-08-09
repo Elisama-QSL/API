@@ -12,7 +12,7 @@ app.post('/register', userController.register);
 app.post('/login', userController.login);
 app.get('/users', userController.getUsers);
 
-// Transfer routes
+// Transferroutes
 app.post('/transfer', transferController.transfer);
 app.get('/transfers', transferController.getTransfers);
 
