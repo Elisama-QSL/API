@@ -5,7 +5,7 @@ function transfer({ from, to, amount }) {
   const sender = users.find(u => u.username === from);
   const recipient = users.find(u => u.username === to);
   if (!sender || !recipient) {
-    return { error: 'Usuário remetente, destinatário não encontrado' };
+    return { error: 'Usuário remetente, 2destinatário não encontrado' };
   }
   if (sender.balance < amount) {
     return { error: 'Saldo insuficiente' };
