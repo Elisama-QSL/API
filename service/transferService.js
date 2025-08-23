@@ -1,3 +1,4 @@
+
 const { users } = require('../model/userModel');
 const { transfers } = require('../model/transferModel');
 
@@ -15,7 +16,7 @@ function transfer({ from, to, amount }) {
   }
   sender.balance -= amount;
   recipient.balance += amount;
-  const transfer = { from, to, amount, date: new Date() };
+  const transfer = { from, to, amount, date: new Date().toISOString() };
   transfers.push(transfer);
   return { transfer };
 }
